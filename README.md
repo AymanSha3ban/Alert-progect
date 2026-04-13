@@ -1,73 +1,115 @@
-# React + TypeScript + Vite
+# 🚀 Alert Component (React + TypeScript)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A reusable and customizable Alert component built using **React**, **TypeScript**, and **SCSS**.
+It supports multiple alert types, dynamic content, and smooth closing animations.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Features
 
-## React Compiler
+* 🔁 Reusable Alert component
+* 🎨 Multiple alert types:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+  * Upgrade
+  * Note
+  * Error
+  * Success
+  * Tips
+* ⚡ Built with TypeScript for type safety
+* 🎭 Dynamic content using `ReactNode`
+* 🎬 Smooth close animation
+* 🧩 SCSS mixins for clean and scalable styling
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📸 Preview
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+> Example of different alert types rendered in the app
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🛠️ Tech Stack
+
+* React
+* TypeScript
+* SCSS
+* Lucide Icons
+
+---
+
+## 📂 Project Structure
+
+```
+src/
+│
+├── components/
+│   └── Alert.tsx
+│
+├── styles/
+│   └── index.scss
+│
+├── App.tsx
+└── types.ts
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## ⚙️ Installation & Setup
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+# Clone the repository
+git clone https://github.com/your-username/your-repo-name.git
+
+# Navigate into the project
+cd your-repo-name
+
+# Install dependencies
+npm install
+
+# Run the project
+npm run dev
 ```
+
+---
+
+## 🧠 Usage Example
+
+```tsx
+<Alert
+  type="success"
+  alertIcon={<CheckCheck />}
+  title="Success"
+  description="This is a success alert."
+/>
+```
+
+---
+
+## 🎯 What I Learned
+
+* Building reusable components
+* Managing state and UI behavior
+* Handling animations in React
+* Writing scalable SCSS using mixins
+* Improving code structure and reusability
+
+---
+
+## 📌 Future Improvements
+
+* ⏳ Auto dismiss alerts
+* 📍 Toast positioning system
+* 📚 Alert manager (global state)
+* 🎨 Better UI/UX enhancements
+
+---
+
+## 🤝 Contributing
+
+Feel free to fork the project and improve it!
+
+---
+
+## 📄 License
+
+This project is open source and available under the MIT License.
