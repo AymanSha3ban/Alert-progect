@@ -1,0 +1,91 @@
+//upgrade color
+$upgradeBorderColor: #9a8e8ed8;
+$upgradeBgColor: #504d4d78;
+$upgradeTextColor: #b8b0b0;
+
+//Note color
+$noteBorderColor: #5d17bed7;
+$noteBgColor: #591faa76;
+$noteTextColor: #640dde;
+
+//wrong color
+$wrongBorderColor: #9d16168b;
+$wrongBgColor: #8e1a1a7c;
+$wrongTextColor: #c80d0d;
+
+//success color
+$successBorderColor: #3bad18c7;
+$successBgColor: #37951a68;
+$successTextColor: #1bc921e9;
+
+//tips color
+$tipsBorderColor: #a5a013d6;
+$tipsBgColor: #85821382;
+$tipsTextColor: #e3e009;
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+@mixin alert($name,$textColor ,$bgColor,$borderColor){
+    .#{$name}{
+        position: relative;
+        border: 2px dashed $borderColor ;
+        margin: 3%;
+        padding: 2%;
+        border-radius: 8px;
+        background-color: $bgColor;
+        color:$textColor;
+        .alert-header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+
+            .alert-title{
+                display:flex;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .close-icon{
+                cursor: pointer;
+            }
+        }
+        .para{
+            font-size: 20px;
+            font-weight: 500;
+        }
+    }
+    .alert {
+        transition: all 0.7s ease;
+        opacity: 1;
+    }
+    .hide {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+}
+.toast{
+   position: relative;
+    color:#e3e009;
+    padding: 20px;
+    margin-top:10px;
+    background-color: #b2af1086;
+    border-left: solid 5px #fff700e8;
+    border-radius: 5px 10px ;
+}
+
+
+@include alert('upgrade', $upgradeTextColor, $upgradeBgColor, $upgradeBorderColor);
+@include alert('note', $noteTextColor, $noteBgColor, $noteBorderColor);
+@include alert('wrong', $wrongTextColor, $wrongBgColor, $wrongBorderColor);
+@include alert('success', $successTextColor, $successBgColor, $successBorderColor);
+@include alert('tips', $tipsTextColor, $tipsBgColor, $tipsBorderColor);
+
+
+
+
+
